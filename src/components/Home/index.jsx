@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 import image1 from "../../utils/images/Cimes-Home-1.jpg";
 
 const Home = () => {
+  const navigate = useNavigate()
+
   const products = [
     { name: "Nombre Producto 1" },
     { name: "Nombre Producto 2" },
@@ -8,6 +12,7 @@ const Home = () => {
     { name: "Nombre Producto 4" },
     { name: "Nombre Producto 5" },
   ];
+  
   return (
     <div className="flex flex-col items-center text-navText font-humanist777 bg-whiteBackground">
       <div className="w-full h-[540px] mb-8 overflow-hidden grid grid-cols-12 gap-8">
@@ -29,7 +34,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button className="mb-16 rounded-lg px-[16px] py-[8px] text-white text-xl text-bold font-feltTipRoman bg-[#D93D33] hover:bg-[#DF5D55] drop-shadow-md">Quiero registrarme</button>
+      <button onClick={() => navigate("/contact")} className="mb-16 rounded-lg px-[16px] py-[8px] text-white text-xl text-bold font-feltTipRoman bg-[#D93D33] hover:bg-[#DF5D55] drop-shadow-md">Quiero registrarme</button>
     </div>
   );
 };
