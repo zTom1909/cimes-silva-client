@@ -14,7 +14,7 @@ const App = () => {
   const pageRoutes = ["/", "/about", "/contact", "/home"];
   const is404 = pageRoutes.includes(location.pathname);
   return (
-    <>
+    <div className="flex flex-col justify-between min-h-screen">
       {is404 && <Nav />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="*" element={<NoPage />} />
       </Routes>
       {is404 && <Footer />}
-    </>
+    </div>
   );
 };
 
