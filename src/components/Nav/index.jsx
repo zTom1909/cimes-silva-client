@@ -15,7 +15,7 @@ const Nav = () => {
     <div className="grid grid-cols-12 gap-8 items-center h-[128px] bg-whiteBackground">
       <div></div>
       <img src={logo} alt="logo cimes" className="h-full" />
-      <h1 className="col-span-2 text-navText text-4xl font-bold font-humanist777">
+      <h1 className="col-span-2 text-navText text-[1.7rem] font-bold font-humanist777">
         Cimes Silva
       </h1>
       <div></div>
