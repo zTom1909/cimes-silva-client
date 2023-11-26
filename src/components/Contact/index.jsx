@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact</h1>
+    <div className="w-full flex justify-center">
+      <h1 className="text-navText text-5xl text-bold">Proximamente...</h1>
     </div>
   );
 };
