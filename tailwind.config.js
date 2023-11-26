@@ -10,6 +10,8 @@ module.exports = {
         navUnderline: "#0B50AF",
         navUnderlineHover: "#0B50AF99",
         navUnderlineUnselected: "#0B50AF54",
+        productBackground: "#FFD2CF",
+        productName: "#E3948F",
       },
       fontFamily: {
         humanist777: ['humanist777', 'sans-serif'],
