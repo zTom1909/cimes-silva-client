@@ -34,7 +34,9 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => navigate("/contact")} className="mb-16 rounded-lg px-[16px] py-[8px] text-white text-xl text-bold font-feltTipRoman bg-[#D93D33] hover:bg-[#DF5D55] drop-shadow-md">Quiero registrarme</button>
+      <button onClick={() => navigate("/contact")} className="mb-16 rounded-lg px-[16px] py-[8px] text-white text-xl text-bold font-feltTipRoman bg-[#D93D33] hover:bg-[#DF5D55] drop-shadow-md">
+        Quiero registrarme
+      </button>
     </div>
   );
 };
