@@ -17,6 +17,9 @@ module.exports = {
         humanist777: ['humanist777', 'sans-serif'],
         feltTipRoman: ['feltTipRoman', 'sans-serif'],
       },
+      backgroundImage: {
+        'no-page': "url('utils/images/404-background.jpeg')",
+      }
     },
   },
   plugins: [],
