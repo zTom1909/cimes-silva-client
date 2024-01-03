@@ -26,7 +26,7 @@ const Footer = () => {
                 href="https://www.instagram.com/cimes.silva/"
                 target="_blank"
                 rel="noreferrer"
-                className="lg:text-base md:text-sm text-xs lg:font-bold font-humanist777 tracking-wider"
+                className="lg:text-base md:text-sm text-xs lg:font-bold font-humanist777 tracking-wider focus:text-gray-200 focus:outline-none"
               >
                 @cimes.silva
               </a>
@@ -37,7 +37,7 @@ const Footer = () => {
                 href="https://www.facebook.com/cimes.silvaehijos"
                 target="_blank"
                 rel="noreferrer"
-                className="lg:text-base md:text-sm text-xs lg:font-bold font-humanist777 tracking-wider"
+                className="lg:text-base md:text-sm text-xs lg:font-bold font-humanist777 tracking-wider focus:text-gray-200 focus:outline-none"
               >
                 @Cimes Silva
               </a>

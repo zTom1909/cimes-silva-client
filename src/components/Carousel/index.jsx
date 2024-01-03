@@ -29,19 +29,19 @@ const Carousel = ({ currentSlide, setCurrentSlide, slides, autoSlide = false, au
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <img src={slide} alt={`home ${index}`} className="h-full" />
+          <img src={slide} alt={`home ${index}`} key={index} className="h-full" />
         ))}
       </div>
       <div className="absolute inset-0 flex justify-between items-center p-4">
         <button
           onClick={previous}
-          className="flex justify-center items-center lg:w-[40px] md:w-[30px] w-[20px] lg:h-[40px] md:h-[30px] h-[20px] p-2 rounded-full shadow opacity-60 text-gray-800 bg-white/80 hover:bg-white"
+          className="flex justify-center items-center lg:w-[40px] md:w-[30px] w-[20px] lg:h-[40px] md:h-[30px] h-[20px] p-2 rounded-full shadow opacity-60 text-gray-800 bg-white/80 hover:bg-white focus:bg-white focus:outline-none"
         >
           <i className="lg:text-base md:text-sm text-xs fa-solid fa-chevron-left" />
         </button>
         <button
           onClick={next}
-          className="flex justify-center items-center lg:w-[40px] md:w-[30px] w-[20px] lg:h-[40px] md:h-[30px] h-[20px] p-2 rounded-full shadow opacity-60 text-gray-800 bg-white/80 hover:bg-white"
+          className="flex justify-center items-center lg:w-[40px] md:w-[30px] w-[20px] lg:h-[40px] md:h-[30px] h-[20px] p-2 rounded-full shadow opacity-60 text-gray-800 bg-white/80 hover:bg-white focus:bg-white focus:outline-none"
         >
           <i className="lg:text-base md:text-sm text-xs fa-solid fa-chevron-right" />
         </button>
@@ -50,6 +50,7 @@ const Carousel = ({ currentSlide, setCurrentSlide, slides, autoSlide = false, au
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
             <div
+              key={i}
               className={`
               transition-all lg:w-3 w-2 lg:h-3 h-2 bg-white rounded-full
               ${currentSlide === i ? "lg:p-2 p-1" : "bg-opacity-50"}
