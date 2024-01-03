@@ -21,8 +21,13 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(baseUrl + "/product");
-      setProducts(data);
+      try {
+        const { data } = await axios.get(baseUrl + "/product");
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+        alert(error.message)
+      }
     })();
   }, [baseUrl]);
 
