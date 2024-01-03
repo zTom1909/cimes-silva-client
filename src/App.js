@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import About from "./views/About";
-import Contact from "./views/Contact";
 import Home from "./views/Home";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -20,7 +19,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       {is404 && <Footer />}
