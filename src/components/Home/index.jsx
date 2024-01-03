@@ -90,7 +90,7 @@ const Home = () => {
         <div className={isHighRes ? "w-full mb-16 grid lg:grid-cols-12 md:grid-cols-6 grid-cols-4 lg:gap-8 md:gap-6 gap-2 items-center" : "max-w-[910px] mb-16 flex flex-warp justify-center items-center"}>
           <div></div>
           <div className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-8 md:gap-6 gap-2 justify-center lg:col-span-10 md:col-span-4 col-span-2">
-            {products.map((product) => (
+            {products?.map((product) => (
               <Product name={product.name} image={product.image} />
             ))}
           </div>
