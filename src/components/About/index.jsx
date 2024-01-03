@@ -3,12 +3,13 @@ import image from "../../utils/images/Cimes-About-1.jpg"
 
 const About = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 424px)' })
+  const isMobileXL = useMediaQuery({ query: '(max-width: 670px)' })
 
   return (
-    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-4 items-center bg-whiteBackground">
+    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-8 lg:gap-8 md:gap-6 gap-2 items-center bg-whiteBackground">
       <div></div>
-      <div className={isMobile ? "h-full text-navText font-humanist777 lg:col-span-10 md:col-span-4 col-span-4" : "lg:col-span-10 md:col-span-4 col-span-4 flex flex-col items-center text-navText font-humanist777"}>
-        <div className={`mb-16 w-full max-w-[910px] overflow-hidden lg:h-[540px] md:h-[340px] ${isMobile ? "h-[140px]" : "h-[240px]"}`}>
+      <div className={isMobile ? "h-full text-navText font-humanist777 lg:col-span-10 md:col-span-4 col-span-6" : "lg:col-span-10 md:col-span-4 col-span-6 flex flex-col items-center text-navText font-humanist777"}>
+        <div className={`mb-16 w-full max-w-[910px] overflow-hidden lg:h-[540px] md:h-[340px] ${!isMobileXL ? "h-[280px]" : isMobile ? "h-[160px]" : "h-[240px]"}`}>
           <img src={image} alt="about" className="w-full h-full " />
         </div>
         <div className="max-w-[910px] lg:mb-16 md:mb-12 mb-8 flex flex-col">

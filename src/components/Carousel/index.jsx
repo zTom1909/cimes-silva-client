@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 const Carousel = ({ currentSlide, setCurrentSlide, slides, autoSlide = false, autoSlideInterval = 10000 }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 424px)' })
+  const isMobileXL = useMediaQuery({ query: '(max-width: 670px)' })
 
   const previous = () =>
     setCurrentSlide((currentSlide) =>
@@ -24,7 +25,7 @@ const Carousel = ({ currentSlide, setCurrentSlide, slides, autoSlide = false, au
   return (
     <div className="overflow-hidden relative">
       <div
-        className={`w-full lg:h-[540px] md:h-[340px] flex items-center transition-transform ease-out duration-500 ${isMobile ? "h-[140px]" : "h-[240px]"}`}
+        className={`w-full lg:h-[540px] md:h-[340px] flex items-center transition-transform ease-out duration-500 ${!isMobileXL ? "h-[280px]" : isMobile ? "h-[160px]" : "h-[240px]"}`}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (

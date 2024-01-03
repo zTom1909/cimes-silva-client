@@ -22,7 +22,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-4 items-center h-[128px] bg-whiteBackground">
+    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-2 items-center h-[128px] bg-whiteBackground">
       <div></div>
       <img src={logo} alt="logo cimes" className="lg:h-full md:h-4/5 h-3/5" />
       {!isTablet ? <h1 className="lg:col-span-3 md:col-span-2 text-navText lg:text-[1.7rem] md:text-[1.4rem] text-[1.2rem] font-bold font-humanist777">

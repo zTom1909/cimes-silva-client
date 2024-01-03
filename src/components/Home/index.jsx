@@ -17,7 +17,9 @@ const Home = () => {
 
   const isHighRes = useMediaQuery({ query: "(max-width: 1090px)" });
   const isPc = useMediaQuery({ query: "(max-width: 1023px)" });
+  const isMobileSmall = useMediaQuery({ query: '(max-width: 350px)' })
   const isMobile = useMediaQuery({ query: '(max-width: 424px)' })
+  const isMobileXL = useMediaQuery({ query: '(max-width: 670px)' })
 
   useEffect(() => {
     (async () => {
@@ -35,9 +37,9 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center text-navText font-humanist777 bg-whiteBackground">
-      <div className={isHighRes ? "w-full h-fit mb-8 overflow-hidden grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-4" : "flex flex-col items-center"}>
+      <div className={isHighRes ? "w-full h-fit mb-8 overflow-hidden grid lg:grid-cols-12 md:grid-cols-6 grid-cols-8 lg:gap-8 md:gap-6 gap-2" : "flex flex-col items-center mb-8"}>
         <div></div>
-        <div className={`w-full max-w-[910px] lg:h-[540px] md:h-[340px] relative lg:col-span-10 md:col-span-4 col-span-4 overflow-hidden ${isMobile ? "h-[140px]" : "h-[240px]"}`}>
+        <div className={`w-full max-w-[910px] lg:h-[540px] md:h-[340px] relative lg:col-span-10 md:col-span-4 col-span-6 overflow-hidden ${!isMobileXL ? "h-[280px]" : isMobile ? "h-[160px]" : "h-[240px]"}`}>
           <Carousel
             currentSlide={currentSlide}
             setCurrentSlide={setCurrentSlide}
@@ -67,7 +69,7 @@ const Home = () => {
       {isPc && (
         <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-4">
           <div></div>
-          <div className="flex flex-col items-center lg:col-span-10 md:col-span-4 col-span-4 mb-16">
+          <div className="flex flex-col items-center lg:col-span-10 md:col-span-4 col-span-4 mb-8">
             <h1 className="mb-1 lg:text-2xl text-xl text-bold">
               {currentSlide === 0 ? "Quienes Somos?" : "Nuestros Valores"}
             </h1>
@@ -92,9 +94,9 @@ const Home = () => {
         <p className="mb-8 lg:text-sm text-xs">Mira un listado de nuestros productos</p>
       )}
       {products.length > 0 && (
-        <div className={isHighRes ? "w-full mb-16 grid lg:grid-cols-12 md:grid-cols-6 grid-cols-4 lg:gap-8 md:gap-6 gap-2 items-center" : "max-w-[910px] mb-16 flex flex-warp justify-center items-center"}>
+        <div className={isHighRes ? "w-full mb-16 grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-2 items-center" : "max-w-[910px] mb-16 flex flex-warp justify-center items-center"}>
           <div></div>
-          <div className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-8 md:gap-6 gap-2 justify-center lg:col-span-10 md:col-span-4 col-span-2">
+          <div className={`grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 lg:gap-8 md:gap-6 gap-2 justify-center lg:col-span-10 md:col-span-4 col-span-4 ${isMobileSmall ? "grid-cols-1" : "grid-cols-2"}`}>
             {products?.map((product) => (
               <Product name={product.name} image={product.image} />
             ))}
