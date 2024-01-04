@@ -27,7 +27,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-6 lg:gap-8 md:gap-6 gap-2 items-center h-[128px] bg-whiteBackground">
+    <div className="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-8 lg:gap-8 md:gap-6 gap-2 items-center h-[128px] bg-whiteBackground">
       <div></div>
       <img src={logo} alt="logo cimes" className="lg:h-full md:h-4/5 h-3/5" />
       {!isTablet ? (
@@ -35,7 +35,7 @@ const Nav = () => {
           CIMES SILVA
         </h1>
       ) : (
-        <div className="col-span-2"></div>
+        <div className="col-span-4"></div>
       )}
       {!isPc && <div className="lg:col-span-2"></div>}
       <div className="grid grid-cols-2 lg:col-span-4">
