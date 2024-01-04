@@ -11,7 +11,7 @@ const Footer = () => {
       <img
         src={logo}
         alt="logo cimes"
-        className="lg:col-span-2 h-auto min-w-[120px] max-w-[200px]"
+        className="lg:col-span-2 h-auto min-w-[100px] max-w-[200px]"
       />
       <div></div>
       {!isMobile ? (
