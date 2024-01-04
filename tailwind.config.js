@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         humanist777: ['humanist777', 'sans-serif'],
         feltTipRoman: ['feltTipRoman', 'sans-serif'],
+        montserrat: ['montserrat', 'sans-serif']
       },
       backgroundImage: {
         'no-page': "url('utils/images/404-background.jpeg')",

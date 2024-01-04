@@ -31,8 +31,8 @@ const Nav = () => {
       <div></div>
       <img src={logo} alt="logo cimes" className="lg:h-full md:h-4/5 h-3/5" />
       {!isTablet ? (
-        <h1 className="lg:col-span-3 md:col-span-2 text-navText lg:text-[1.7rem] md:text-[1.4rem] text-[1.2rem] font-bold font-humanist777">
-          Cimes Silva
+        <h1 className="lg:col-span-3 md:col-span-2 text-navUnderline lg:text-2xl md:text-xl text-lg  font-montserrat">
+          CIMES SILVA
         </h1>
       ) : (
         <div className="col-span-2"></div>
