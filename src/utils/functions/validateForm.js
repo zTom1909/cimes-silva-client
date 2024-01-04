@@ -9,7 +9,7 @@ const validateForm = (inputs, isSubmit) => {
       errors.name = "Tu nombre debe tener al menos 4 letras";
     else if (inputs.name.length > 20)
       errors.name = "Tu nombre debe tener un máximo de 20 letras";
-    else if (!nameRegex.test(inputs.name))
+    else if (!nameRegex.test(inputs.name.trim()))
       errors.name = "Formato inválido de nombre";
   }
   if ("location" in inputs || isSubmit) {
